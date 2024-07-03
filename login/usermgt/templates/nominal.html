@@ -1,0 +1,107 @@
+<!--
+
+<html>
+<head> <title>html page</title>
+</head>
+
+<body>
+	<form method="POST" action="../calc/">
+	{% csrf_token %}
+	enter distance in km:<input type="num" name="dist"><br>
+
+	<p>select your class </p>
+	<select name="class" id="class">
+   	 <option value="class1">1st class-30% additional charges</option>
+  	  <option value="class2">2nd class-10% additional charges</option>
+  	  <option value="class3">3rd class-5% additional charges</option>
+ 	  <option value="nclass">normal class-no additional charges</option>
+	</select><br>
+	
+	<p>select your age </p>
+	<select name="age" id="age">
+   	 <option value="1 to 10">1 to 10 years-100% off</option>
+  	  <option value="10 to 20">10 to 20 years-30% off</option>
+  	  <option value="20 to 60">20 to 60 years-0% off</option>
+ 	  <option value="more than 60">more than 60 years-50% off</option>
+	</select><br>
+	<input type="submit" value="submit" name="sumbit">
+	</form>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  form {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 8px;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  input[type="num"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  p {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<form method="POST" action="../calc/">
+  {% csrf_token %}
+  <label for="dist">Enter distance in km:</label>
+  <input type="num" name="dist" id="dist"><br>
+
+  <p>Select your class:</p>
+  <select name="class" id="class">
+    <option value="class1">1st class-30% additional charges</option>
+    <option value="class2">2nd class-10% additional charges</option>
+    <option value="class3">3rd class-5% additional charges</option>
+    <option value="nclass">Normal class-no additional charges</option>
+  </select><br>
+  
+  <p>Select your age:</p>
+  <select name="age" id="age">
+    <option value="1 to 10">1 to 10 years-100% off</option>
+    <option value="10 to 20">10 to 20 years-30% off</option>
+    <option value="20 to 60">20 to 60 years-0% off</option>
+    <option value="more than 60">More than 60 years-50% off</option>
+  </select><br><br>
+  <input type="submit" value="Submit" name="submit">
+</form>
+
+</body>
+</html>
